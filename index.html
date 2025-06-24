@@ -29,6 +29,7 @@
       text-align: center;
       position: relative;
       overflow: hidden;
+      animation: fadeIn 1.2s ease-in-out;
     }
 
     .card::before {
@@ -47,12 +48,14 @@
       font-size: 36px;
       color: #007bff;
       margin-bottom: 20px;
+      animation: slideInDown 1s ease;
     }
 
     .card p {
       font-size: 20px;
       margin-bottom: 30px;
       color: #444;
+      animation: fadeInUp 1.4s ease;
     }
 
     .features {
@@ -69,6 +72,11 @@
       padding: 20px;
       width: 160px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
     }
 
     .feature i {
@@ -94,6 +102,7 @@
       box-shadow: 0 8px 15px rgba(0,0,0,0.1);
       transition: 0.3s ease;
       display: inline-block;
+      animation: bounceIn 1.6s ease;
     }
 
     .btn:hover {
@@ -110,6 +119,27 @@
       background: linear-gradient(135deg, #ffffff, #eeeeee);
       border-radius: 50%;
       opacity: 0.15;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    @keyframes slideInDown {
+      from {transform: translateY(-50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {transform: translateY(50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes bounceIn {
+      0% {transform: scale(0.8); opacity: 0;}
+      60% {transform: scale(1.1); opacity: 1;}
+      100% {transform: scale(1);}
     }
   </style>
 </head>
