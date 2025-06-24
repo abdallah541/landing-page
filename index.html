@@ -2,173 +2,116 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>صورة مميزة للخدمة</title>
+  <title>تطبيقك بين يديك</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
-
     body {
       margin: 0;
-      padding: 0;
-      background: radial-gradient(circle at top left, #00c6ff, #007bff);
       font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom right, #007bff, #00c6ff);
+      color: #fff;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      min-height: 100vh;
+      padding: 40px 20px;
     }
 
-    .card {
-      background: white;
-      color: #222;
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      background-color: #fff;
+      color: #333;
       border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-      padding: 40px;
-      max-width: 750px;
-      width: 90%;
-      text-align: center;
-      position: relative;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      display: flex;
+      flex-wrap: wrap;
       overflow: hidden;
-      animation: fadeIn 1.2s ease-in-out;
     }
 
-    .card::before {
-      content: "";
-      position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 150px;
-      height: 150px;
-      background: linear-gradient(135deg, #ffcc00, #ffc107);
-      border-radius: 50%;
-      opacity: 0.2;
+    .content, .image {
+      flex: 1 1 300px;
+      padding: 40px;
     }
 
-    .card h1 {
-      font-size: 36px;
-      color: #007bff;
+    .content h1 {
+      font-size: 32px;
       margin-bottom: 20px;
-      animation: slideInDown 1s ease;
+      color: #007bff;
     }
 
-    .card p {
-      font-size: 20px;
+    .content p {
+      font-size: 18px;
       margin-bottom: 30px;
-      color: #444;
-      animation: fadeInUp 1.4s ease;
     }
 
     .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
       margin-bottom: 30px;
     }
 
     .feature {
-      background: #f9f9f9;
-      border-radius: 12px;
-      padding: 20px;
-      width: 160px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-
-    .feature:hover {
-      transform: translateY(-5px);
-    }
-
-    .feature i {
-      font-size: 28px;
-      color: #007bff;
-      margin-bottom: 10px;
-    }
-
-    .feature span {
-      display: block;
-      font-size: 16px;
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-radius: 10px;
       font-weight: bold;
-      color: #333;
+      text-align: center;
     }
 
     .btn {
       background-color: #ffcc00;
+      padding: 12px 30px;
       color: #000;
-      text-decoration: none;
-      padding: 14px 35px;
+      border: none;
+      border-radius: 10px;
       font-size: 18px;
-      border-radius: 12px;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
       transition: 0.3s ease;
-      display: inline-block;
-      animation: bounceIn 1.6s ease;
+      text-decoration: none;
     }
 
     .btn:hover {
       background-color: #e6b800;
-      transform: translateY(-3px);
     }
 
-    .decoration {
-      position: absolute;
-      bottom: -60px;
-      left: -60px;
-      width: 150px;
-      height: 150px;
-      background: linear-gradient(135deg, #ffffff, #eeeeee);
-      border-radius: 50%;
-      opacity: 0.15;
+    .image img {
+      width: 100%;
+      max-width: 350px;
+      display: block;
+      margin: auto;
     }
 
-    @keyframes fadeIn {
-      from {opacity: 0; transform: scale(0.95);}
-      to {opacity: 1; transform: scale(1);}
-    }
-
-    @keyframes slideInDown {
-      from {transform: translateY(-50px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
-
-    @keyframes fadeInUp {
-      from {transform: translateY(50px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
-
-    @keyframes bounceIn {
-      0% {transform: scale(0.8); opacity: 0;}
-      60% {transform: scale(1.1); opacity: 1;}
-      100% {transform: scale(1);}
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .features {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Landing Page احترافية وجذابة</h1>
-    <p>أصمّم لك صفحة هبوط مميزة بتصميم متجاوب وسريع، مناسبة لتسويق التطبيقات أو المنتجات أو الخدمات بأسلوب احترافي</p>
+  <div class="container">
+    <div class="content">
+      <h1>صفحة هبوط لتطبيقك</h1>
+      <p>أحصل على صفحة احترافية لعرض تطبيقك بشكل جذاب وسريع الاستجابة، تساعدك في جذب العملاء وتحقيق التحميلات.</p>
 
-    <div class="features">
-      <div class="feature">
-        <i class="fas fa-mobile-alt"></i>
-        <span>تصميم متجاوب</span>
+      <div class="features">
+        <div class="feature">تصميم جذاب</div>
+        <div class="feature">سريع الاستجابة</div>
+        <div class="feature">متوافق مع الموبايل</div>
+        <div class="feature">زر تحميل واضح</div>
       </div>
-      <div class="feature">
-        <i class="fas fa-bolt"></i>
-        <span>سرعة تحميل عالية</span>
-      </div>
-      <div class="feature">
-        <i class="fas fa-magic"></i>
-        <span>جاذبية بصريّة</span>
-      </div>
-      <div class="feature">
-        <i class="fas fa-hand-holding-usd"></i>
-        <span>سعر مميز</span>
-      </div>
+
+      <a href="https://wa.me/2001555878748" class="btn">اطلب الان مقابل 5$</a>
     </div>
 
-    <a href="#" class="btn">اطلب الآن بـ 5$</a>
-    <div class="decoration"></div>
+    <div class="image">
+      <img src="real_phone_mockup.png.png" alt="صورة موبايل">
+    </div>
   </div>
 </body>
 </html>
