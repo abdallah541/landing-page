@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>صورة مميزة للخدمة</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top left, #00c6ff, #007bff);
+      font-family: 'Cairo', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: white;
+      color: #222;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      padding: 40px;
+      max-width: 750px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(135deg, #ffcc00, #ffc107);
+      border-radius: 50%;
+      opacity: 0.2;
+    }
+
+    .card h1 {
+      font-size: 36px;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .feature {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      width: 160px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .feature i {
+      font-size: 28px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .feature span {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .btn {
+      background-color: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      padding: 14px 35px;
+      font-size: 18px;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #e6b800;
+      transform: translateY(-3px);
+    }
+
+    .decoration {
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(135deg, #ffffff, #eeeeee);
+      border-radius: 50%;
+      opacity: 0.15;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Landing Page احترافية وجذابة</h1>
+    <p>أصمّم لك صفحة هبوط مميزة بتصميم متجاوب وسريع، مناسبة لتسويق التطبيقات أو المنتجات أو الخدمات بأسلوب احترافي</p>
+
+    <div class="features">
+      <div class="feature">
+        <i class="fas fa-mobile-alt"></i>
+        <span>تصميم متجاوب</span>
+      </div>
+      <div class="feature">
+        <i class="fas fa-bolt"></i>
+        <span>سرعة تحميل عالية</span>
+      </div>
+      <div class="feature">
+        <i class="fas fa-magic"></i>
+        <span>جاذبية بصريّة</span>
+      </div>
+      <div class="feature">
+        <i class="fas fa-hand-holding-usd"></i>
+        <span>سعر مميز</span>
+      </div>
+    </div>
+
+    <a href="#" class="btn">اطلب الآن بـ 5$</a>
+    <div class="decoration"></div>
+  </div>
+</body>
+</html>
